@@ -5,12 +5,12 @@ Evaluation of residential mobility and forward modeling of oxygen isotope integr
 Contains all code to reproduce results presented in [manuscript].
 ## X_setup.R
 Reads in required data and loads functions required for data analysis. Functions built without library dependencies to ensure stability throughout the analysis. Functions include:
-_rmse_- Calculation for root mean squared error
-_mae_ - Calculation for mean absolute error
-_bootstrap_error_single_ - Single dataset bootstrap for error metric calculation and confidence interval determination
-_bootstrap_error_pair_ - Pairwise bootstrap for comparison of error metrics between forward model residuals
-_make_boot_df_ - Cleaning function for paired bootstrap output to manipulate data for visualization
-_glmm_summary_ - Creates a coefficient table from GLMM outputs
+* _rmse_- Calculation for root mean squared error
+* _mae_ - Calculation for mean absolute error
+* _bootstrap_error_single_ - Single dataset bootstrap for error metric calculation and confidence interval determination
+* _bootstrap_error_pair_ - Pairwise bootstrap for comparison of error metrics between forward model residuals
+* _make_boot_df_ - Cleaning function for paired bootstrap output to manipulate data for visualization
+* _glmm_summary_ - Creates a coefficient table from GLMM outputs
 
 ## Y_analysis.R
 Performs all data analysis as presented in [manuscript]. Sources X_setup. This includes: 
@@ -22,7 +22,7 @@ Performs all data analysis as presented in [manuscript]. Sources X_setup. This i
 Option to load in exact coefficient table used in initial interpretations; however, the GLMM outputs will be stable across iterations of the script but this allows a bypass for running the entire script if desired.
 
 ## Z_figures.R
-Recreates the figures present in [manuscript] and as is outlined in the following "Figures" sections. Sources Y_analysis.
+Recreates the figures present in [manuscript]. Sources Y_analysis.
 
 Option to load in exact pairwise bootstrap results to visualize these comparisons; however, seeds within Y_analysis should be stable for reproduction.
 
