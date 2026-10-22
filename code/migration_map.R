@@ -7,7 +7,7 @@ library(sf)
 ## Cleaned US Census Data 
 ## From: Table 1. State-to-State Migration Flows: 
 ### 2023 American Community Survey 1-Year Estimates
-dest_orig <-read.csv('data/dest_orig.csv')
+dest_orig <- read.csv('data/dest_orig.csv')
 
 ## US States Shapefile
 states_shape <- st_read('data/states.shp', quiet = TRUE) %>%
@@ -92,3 +92,6 @@ map <- ggplot() +
     axis.text.x = element_blank(),
     axis.text.y = element_blank()
   )
+
+# NOTE: The map output is not perfectly aligned between the arrows and background
+#       isoscape and required manual adjustment of the export.
