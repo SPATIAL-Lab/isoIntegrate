@@ -2,7 +2,7 @@
 Evaluation of residential mobility and forward modeling of oxygen isotope integration in human enamel. Here, we evaluate how childhood residential mobility affects geographic provenance interpretations based on stable oxygen isotopes in human enamel and present first-order, residence-informed forward models for predicting the integrated isotope signal recovered from conventional forensic samples.
 
 # code/
-Contains all code to reproduce results presented in [manuscript].
+Contains all code to reproduce results presented in Delgado et al. in prep.
 ## X_setup.R
 Reads in required data and loads functions required for data analysis. Functions built without library dependencies to ensure stability throughout the analysis. Functions include:
 * _rmse_- Calculation for root mean squared error
@@ -13,7 +13,7 @@ Reads in required data and loads functions required for data analysis. Functions
 * _glmm_summary_ - Creates a coefficient table from GLMM outputs
 
 ## Y_analysis.R
-Performs all data analysis as presented in [manuscript]. Sources X_setup. This includes: 
+Performs all data analysis as presented in Delgado et al. in prep. Sources X_setup. This includes: 
 * Regression and predictions of isotopic data.
 * Forward modeling of integrated isotope measurements from residence histories
 * Diagnostic statistics (Shapiro-Wilk Normality, Levene's Test).
@@ -22,7 +22,7 @@ Performs all data analysis as presented in [manuscript]. Sources X_setup. This i
 Option to load in exact coefficient table used in initial interpretations; however, the GLMM outputs will be stable across iterations of the script but this allows a bypass for running the entire script if desired.
 
 ## Z_figures.R
-Recreates the figures present in [manuscript]. Sources Y_analysis.
+Recreates the figures present in Delgado et al. in prep. Sources Y_analysis.
 
 Option to load in exact pairwise bootstrap results to visualize these comparisons; however, seeds within Y_analysis should be stable for reproduction.
 
@@ -37,8 +37,8 @@ Contains the data required for the analysis. Includes:
 * states.shp/.shx/.dbf - Shapefile for CONUS state boundaries used to create the migration_map figure and not core for analysis.
 
 # Figures/
-Contains the figures presented in [manuscript]. Reference manuscript for figure descriptions.
+Contains the figures presented in Delgado et al. in prep. Reference manuscript for figure descriptions.
 
 # Tables/
-Contains the formatted Excel tables presented in [manuscript] including error metrics, GLMM coefficient table, GLMM metadata, and sensitivity test comparison.
+Contains the formatted Excel tables presented in Delgado et al. in prep including error metrics, GLMM coefficient table, GLMM metadata, and sensitivity test comparison.
 
